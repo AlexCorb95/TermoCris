@@ -1,11 +1,7 @@
 .navbar{
-	background: linear-gradient(-90deg, #ee7751, #e73c7e, #23a6d5, #23d5ab);
-	background-size: 400% 400%;
-	animation: gradient 15s ease infinite;
-	height: 10vh;
-}
-.navbar {
-  background: linear-gradient(to right, #c33764, #1d2671);
+	background: linear-gradient(-90deg, lightskyblue, #5fa7d5);
+	background-size: 200% 50%;
+	animation: gradient 6s ease infinite;
 }
 @keyframes gradient {
 	0% {
@@ -17,4 +13,13 @@
 	100% {
 		background-position: 0% 50%;
 	}
+}
+.bg {
+	background: lightskyblue;
+}
+
+.nav-text{
+	font-family: Calibri ;
+	font-size: large;
+	text-shadow: 0.5px 0.5px 3px rgba(0, 0, 0, 0.56);
 }
