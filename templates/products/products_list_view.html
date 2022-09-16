@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} Produse {% endblock %}
+{% block content %}
+    <div class="container-fluid">
+        <div class="row" style="display: flex">
+            {% for product in all_products %}
+                <div class="col-md-3 py-2">
+                    <div class="card">
+                        {% if product.product_img %}
+                            <img src="{{ product.product_img.url }}" class="card-img-top" alt="image" height="250px">
+                        {% else %}
+                            <img src="{% static 'static/images/meh.jpg' %}" class="card-img-top" alt="no image"
+                                 height="250px">
+                        {% endif %}
+                        <div class="card-body">
+                            <h5 class="card-title">{{ product.product_name }}</h5>
+                            <h6 class="card-subtitle">{{ product.product_short_desc }}</h6>
+                            <br>
+                            <div class="d-grid gap-2">
+                                <h5>{{ product.product_price }}</h5>
+                                <button class="btn btn-primary" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;"> Adauga in cos</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}
